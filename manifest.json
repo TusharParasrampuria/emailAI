@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Email.AI",
+  "description": "Generate smart Gmail replies with AI",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://mail.google.com/*"],
+    "js": ["content.js"]
+  }]
+}
